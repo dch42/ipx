@@ -9,9 +9,8 @@ from tinytag import TinyTag
 from tqdm import tqdm
 
 
-    
+LOG = './ipod_extract.log'
 home = os.path.expanduser('~')
-LOG = f'./ipod_extract.log'
 extensions = [".mp3", ".m4a", ".mp4", ".m4b", ".aac", ".aiff"]
 various = ["VA", "Various", "Various Artists"]
 
