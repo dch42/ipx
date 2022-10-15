@@ -37,8 +37,7 @@ def pad_zeroes(track):
         if int(track) in range(0, 10):
             padded = f"0{track}"
             return padded
-        else:
-            return track
+    return track
 
 
 def iter_files(ipod_path):
