@@ -1,6 +1,6 @@
 # ipx
 
-`ipx` is a quick script to locally extract and sanely organize audio files from an iPod. 
+`ipx` is a quick script to extract audio files from an iPod and sanely organize the files locally. 
 
 ## Usage
 
@@ -15,3 +15,7 @@ options:
   -o O        path to local directory for extraction (default:
               ~/iPod/Music)
 ~~~
+
+Point the script to a mounted iPod's music directory (`${ipod}/iPod_Control/Music/`) with the `-i` option.
+
+By default, audio files will be extracted to an `iPod/Music/` directory in `$HOME`. If desired, pass an alternate path with `-o`.
