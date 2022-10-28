@@ -10,7 +10,7 @@ from tinytag import TinyTag
 from tqdm import tqdm
 
 
-LOG = "./ipod_extract.log"
+LOG = "./ipx.log"
 home = os.path.expanduser("~")
 extensions = [".mp3", ".m4a", ".mp4", ".m4b", ".aac", ".aiff"]
 various = ["VA", "Various", "Various Artists"]
@@ -71,7 +71,7 @@ def iter_files(ipod_path):
                     )
                     os.system(f"cp {audio_file} {unparsed_dump}")
                     tqdm.write(msg)
-                    logging.info(msg)
+                    
 
 
 def extract_file(file, tags, ext):
@@ -100,6 +100,10 @@ def extract_file(file, tags, ext):
 
 
 if __name__ == "__main__":
+    
     args = parse_args(sys.argv[:1])
     ipod_path = args.i
+    logging.info(f"[START] Script traversing {ipod_path}...")
     iter_files(ipod_path)
+    logging.info(f"[FINISH] Run complete.\n")
+
