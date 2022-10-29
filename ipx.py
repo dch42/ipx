@@ -67,7 +67,7 @@ def iter_files(ipod_path):
                 except Exception as error:
                     msg = f"Parsing `{audio_file}` failed: {error}"
                     unparsed_dump = (
-                        f"{str(args.o)}" if args.o else f"{home}/iPod/Unknown_Tags/"
+                        f"{str(args.o)}/Unknown_Tags/" if args.o else f"{home}/iPod/Unknown_Tags/"
                     )
                     os.system(f"cp {audio_file} {unparsed_dump}")
                     tqdm.write(msg)
