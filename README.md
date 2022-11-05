@@ -40,3 +40,13 @@ Example structure:
 ├── F02
 ...
 ~~~
+
+`ipx` walks these subdirectories, passing discovered audio files to [TinyTag](https://github.com/devsnd/tinytag) for parsing.  
+
+If parsing is successful, files are copied to a default location of `$HOME/iPod/Music/$artist/$album/`[^1] and renamed following a `$tracknum - $artist - $title.ext` convention.
+
+`ipx` attempts to suss out compilation albums, and will place them in a `Various` subdirectory.
+
+If unable to parse a file, the file will be copied to `Unknown Tags` subdirectory for manual evaluation.
+
+[^1]This path can be overridden by specifying a custom path with `-o`.
