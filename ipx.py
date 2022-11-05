@@ -39,7 +39,12 @@ def parse_args(args):
 
 def cleanse(val):
     """Sanitize tag strings for dir/filenames"""
-    val = val.replace("/", "").replace(":", "-").replace("?", "")
+    illegal_chars = ['/','\\','<','>','*','?','|',':']
+    for char in illegal_chars:
+        if char in '/' ':':
+            val = val.replace(char,"-")
+        else:
+            val = val.replace(char,"")
     return val
 
 
