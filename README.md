@@ -49,4 +49,23 @@ If parsing is successful, files are copied to a default location of `$HOME/iPod/
 
 If unable to parse a file, the file will be copied to `/Unknown Tags/` subdirectory for manual evaluation.
 
+Sorted local directory structure looks something like this:
+
+~~~
+/Users/user/iPod/Music
+├──  Artist Name
+│   ├── Album Name 
+│   │   ├── 01 -  Artist Name - Track Title.m4a
+│   │   └── 02 -  Artist Name - Track Title.m4a
+│   └── Album Name 
+│       ├── 01 -  Artist Name - Track Title.m4a
+│       └── 02 -  Artist Name - Track Title.m4a
+├── Various
+│   ├── Compilation Name
+│   │   ├── 01 - Artist Name - Track Title.m4a
+│   │   ├── 02 - Artist Name - Track Title.m4a
+│   │   ├── 03 - Artist Name - Track Title.m4a
+|   |    ...
+~~~
+
 [^1]: This path can be overridden by specifying a custom path with `-o`.
