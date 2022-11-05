@@ -22,9 +22,9 @@ By default, audio files will be extracted to an `iPod/Music/` directory in `$HOM
 
 ### How It Works
 
-The iPod stores audio files in a collection of subdirectories of the `iPod_Control/Music/` directory, incrementing upwards from `F00`. The files themselves are named as strings of four uppercase alphabetical characters. 
+The iPod stores audio files in a collection of subdirectories of the `iPod_Control/Music/` directory, incrementing from `F00`. The files themselves are named as strings of four uppercase alphabetical characters. 
 
-Example:
+Example structure:
 ~~~
 /Volumes/IPOD/iPod_Control/Music/
 ├── F00
