@@ -67,11 +67,12 @@ def iter_files(ipod_path):
                 except Exception as error:
                     msg = f"Parsing `{audio_file}` failed: {error}"
                     unparsed_dump = (
-                        f"{str(args.o)}/Unknown_Tags/" if args.o else f"{home}/iPod/Unknown_Tags/"
+                        f"{str(args.o)}/Unknown_Tags/"
+                        if args.o
+                        else f"{home}/iPod/Unknown_Tags/"
                     )
                     os.system(f"cp {audio_file} {unparsed_dump}")
                     tqdm.write(msg)
-                    
 
 
 def extract_file(file, tags, ext):
@@ -100,10 +101,9 @@ def extract_file(file, tags, ext):
 
 
 if __name__ == "__main__":
-    
+
     args = parse_args(sys.argv[:1])
     ipod_path = args.i
     logging.info(f"[START] Script traversing {ipod_path}...")
     iter_files(ipod_path)
     logging.info(f"[FINISH] Run complete.\n")
-
