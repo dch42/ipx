@@ -107,7 +107,7 @@ def extract_file(file, tags, ext):
 
 if __name__ == "__main__":
 
-    args = parse_args(sys.argv[:1])
+    args = parse_args(sys.argv[1:])
     ipod_path = args.i
     logging.info(f"[START] Script traversing {ipod_path}...")
     iter_files(ipod_path)
