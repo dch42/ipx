@@ -68,4 +68,6 @@ Sorted local directory structure looks something like this:
 |   |    ...
 ~~~
 
+Log file can be found in script directory, `ipx.log`.
+
 [^1]: This path can be overridden by specifying a custom path with `-o`.
